@@ -1,6 +1,6 @@
 # PokeAPI con Flask
 
-Esta es una API en Flask que permite obtener información sobre Pokémon utilizando datos de la [PokeAPI](https://pokeapi.co/).
+Esta es una API en Flask que permite obtener información sobre Pokemon utilizando datos de la [PokeAPI](https://pokeapi.co/).
 
 Incluye autenticacion básica y las siguientes funciones:
 - Consultar tipos de Pokemon
@@ -43,11 +43,9 @@ Incluye autenticacion básica y las siguientes funciones:
 
 ------------------------------------------------------------------------------
 
-🎲 Obtener un Pokémon segun su nombre
+🎲 Obtener un Pokemon segun su nombre
 
-```http
     GET /pokemon/{name}
-```
 
 Ejemplo
 ```bash
@@ -56,11 +54,9 @@ Ejemplo
 
 --------------------------------------------------
 
-🎲 Obtener un Pokémon aleatorio de un tipo específico
+🎲 Obtener un Pokemon aleatorio de un tipo específico
 
-```http
     GET /random_pokemon/{type}
-```
 
 Ejemplo:
 ```bash
@@ -69,11 +65,9 @@ Ejemplo:
 
 --------------------------------------------------
 
-🎲 Obtener el Pokémon con el nombre más largo de un tipo
+🎲 Obtener el Pokemon con el nombre más largo de un tipo
 
-```http
     GET /longest_pokemon_name/{type}
-```
 
 Ejemplo:
 ```bash
