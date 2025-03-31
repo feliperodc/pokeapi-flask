@@ -16,20 +16,27 @@ Incluye autenticacion básica y las siguientes funciones:
 ## 🚀 Instalación y Ejecución
 
 1. Clona este repositorio:
-   bash
-   git clone https://github.com/feliperodc/pokeapi-flask.git
-   cd challenge-pokeapi
+   ```bash
+        git clone https://github.com/feliperodc/pokeapi-flask.git
+        cd challenge-pokeapi
+    ```
 
 2. Crea un entorno virtual (opcional, pero recomendado):
-    python -m venv venv
-    # En macOS/Linux: source venv/bin/activate 
-    # En Windows: venv\Scripts\activate
+    ```bash
+        python -m venv venv
+        source venv/bin/activate # En macOS/Linux 
+        venv\Scripts\activate # En Windows
+    ```
 
 3. Instala las dependencias:
-    pip install -r requirements.txt
+    ```bash
+        pip install -r requirements.txt
+    ```
 
 4. Ejecuta la aplicación:
-    python app.py
+    ```bash
+        python app.py
+    ```
 
 5. Accede a la API en tu navegador:
     http://localhost:5000
@@ -38,30 +45,40 @@ Incluye autenticacion básica y las siguientes funciones:
 
 🎲 Obtener un Pokémon segun su nombre
 
-GET /pokemon/{name}
+```http
+    GET /pokemon/{name}
+```
 
 Ejemplo
-bash
-http://localhost:5000/pokemon/pikachu
+```bash
+    http://localhost:5000/pokemon/pikachu
+```
 
 --------------------------------------------------
 
 🎲 Obtener un Pokémon aleatorio de un tipo específico
 
-GET /random_pokemon/{type}
+```http
+    GET /random_pokemon/{type}
+```
 
 Ejemplo:
-bash
-http://localhost:5000/random_pokemon/fire
+```bash
+    http://localhost:5000/random_pokemon/fire
+```
 
 --------------------------------------------------
 
 🎲 Obtener el Pokémon con el nombre más largo de un tipo
 
-GET /longest_pokemon_name/{type}
+```http
+    GET /longest_pokemon_name/{type}
+```
 
 Ejemplo:
-http://localhost:5000/longest_pokemon_name/water
+```bash
+    http://localhost:5000/longest_pokemon_name/water
+```
 
 ------------------------------------------------------------------------------
 
