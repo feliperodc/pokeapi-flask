@@ -1,7 +1,11 @@
-# Pokémon API 🐉
+# PokeAPI con Flask
 
-Esta es una API en Flask que permite obtener información sobre Pokémon utilizando datos de la [PokeAPI](https://pokeapi.co/). 
-Incluye autenticación básica y funciones para consultar tipos de Pokémon, obtener un Pokémon aleatorio y encontrar el Pokémon con el nombre más largo de un tipo específico.
+Esta es una API en Flask que permite obtener información sobre Pokémon utilizando datos de la [PokeAPI](https://pokeapi.co/).
+
+Incluye autenticacion básica y las siguientes funciones:
+- Consultar tipos de Pokemon
+- Obtener un Pokemon aleatorio de un tipo especifico
+- Encontrar el Pokemon con el nombre mas largo de un tipo especifico.
 
 ## 📋 Requisitos Previos
 
@@ -13,12 +17,13 @@ Incluye autenticación básica y funciones para consultar tipos de Pokémon, obt
 
 1. Clona este repositorio:
    bash
-   git clone https://github.com/feliperodc/pruebasmeli.git
-   cd pokeapichallenge
+   git clone https://github.com/feliperodc/pokeapi-flask.git
+   cd challenge-pokeapi
 
 2. Crea un entorno virtual (opcional, pero recomendado):
     python -m venv venv
-    #macOS/Linux source venv/bin/activate # En Windows: venv\Scripts\activate
+    # En macOS/Linux: source venv/bin/activate 
+    # En Windows: venv\Scripts\activate
 
 3. Instala las dependencias:
     pip install -r requirements.txt
@@ -26,7 +31,7 @@ Incluye autenticación básica y funciones para consultar tipos de Pokémon, obt
 4. Ejecuta la aplicación:
     python app.py
 
-5. Accede a la API en tu navegador o Postman:
+5. Accede a la API en tu navegador:
     http://localhost:5000
 
 ------------------------------------------------------------------------------
@@ -40,7 +45,6 @@ bash
 http://localhost:5000/pokemon/pikachu
 
 --------------------------------------------------
---------------------------------------------------
 
 🎲 Obtener un Pokémon aleatorio de un tipo específico
 
@@ -50,7 +54,6 @@ Ejemplo:
 bash
 http://localhost:5000/random_pokemon/fire
 
---------------------------------------------------
 --------------------------------------------------
 
 🎲 Obtener el Pokémon con el nombre más largo de un tipo
