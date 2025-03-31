@@ -1,6 +1,4 @@
-from flask import jsonify
-from flask import request
-from flask import Blueprint
+from flask import jsonify, request, Blueprint
 from src.auth import auth
 from src.services import get_pokemon_type, get_random_pokemon, get_longest_pokemon_name
 
