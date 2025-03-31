@@ -18,7 +18,7 @@ Incluye autenticacion básica y las siguientes funciones:
 1. Clona este repositorio:
    ```bash
         git clone https://github.com/feliperodc/pokeapi-flask.git
-        cd challenge-pokeapi
+        cd pokeapi-flask
     ```
 
 2. Crea un entorno virtual (opcional, pero recomendado):
