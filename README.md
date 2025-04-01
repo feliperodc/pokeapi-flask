@@ -53,9 +53,7 @@ Para acceder a los endpoints de la API, se requiere autenticación mediante un t
 
 Ejemplo con `curl`:
 ```bash
-curl -X POST "http://localhost:5000/login" \
-     -H "Content-Type: application/json" \
-     -d '{"username": "admin", "password": "password1"}'
+curl -X POST "http://localhost:5000/login" -H "Content-Type: application/json" -d '{"username": "admin", "password": "password1"}'
 ```
 
 Esto devolverá un token JWT que deberás incluir en las siguientes peticiones.
@@ -63,8 +61,7 @@ Esto devolverá un token JWT que deberás incluir en las siguientes peticiones.
 ### Uso del Token JWT
 Agrega el token en los headers de las solicitudes:
 ```bash
-curl -X GET "http://localhost:5000/pokemon/pikachu" \
-     -H "x-access-token: <TU_TOKEN_AQUÍ>"
+curl -X GET "http://localhost:5000/pokemon/pikachu" -H "x-access-token: <TOKEN>"
 ```
 
 ------------------------------------------------------------------------------
