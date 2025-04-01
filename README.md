@@ -43,6 +43,30 @@ Incluye autenticacion básica y las siguientes funciones:
 
 ------------------------------------------------------------------------------
 
+🔑 Autenticacion JWT
+
+Para acceder a los endpoints de la API, se requiere autenticación mediante un token JWT. Para obtener un token, realiza una solicitud POST a la ruta /login con las credenciales:
+
+URL: http://localhost:5000/login
+Método: POST
+Cuerpo (JSON):
+    ```bash
+        {
+            "username": "admin",
+            "password": "password1"
+        }
+    ```
+Si las credenciales son correctas, recibirás un token JWT en la respuesta, que debes incluir en las cabeceras de las siguientes solicitudes.
+
+# Ejemplo de solicitud para obtener el token:
+
+```bash
+    curl -X POST "http://localhost:5000/login" -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"password1\"}"
+```
+El token debe ser incluido en la cabecera x-access-token para acceder a los siguientes endpoints.
+
+------------------------------------------------------------------------------
+
 🎲 Obtener un Pokemon segun su nombre
 
     GET /pokemon/{name}
