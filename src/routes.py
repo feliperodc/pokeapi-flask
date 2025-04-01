@@ -1,5 +1,5 @@
-from flask import jsonify, request, Blueprint
-from src.auth import token_required, login
+from flask import request, Blueprint
+from src.auth import token_required
 from src.services import get_pokemon_type, get_random_pokemon, get_longest_pokemon_name
 
 # Definir el Blueprint para modularizar
@@ -28,6 +28,5 @@ def random_pokemon(type):
 def longest_pokemon(type):
     return get_longest_pokemon_name(type)
 
-def configure_routes(app, secret_key):
+def configure_routes(app):
     app.register_blueprint(routes_bp)
-    app.secret_key = secret_key  # Agregar la clave secreta a la app

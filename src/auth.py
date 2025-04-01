@@ -33,5 +33,4 @@ def login(auth, secret_key):
         token = jwt.encode({'user': auth_data['username'], 'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)}, 
                            secret_key, algorithm="HS256")
         return jsonify({'token': token})
-    
     return jsonify({'error': 'Credenciales inválidas'}), 401
