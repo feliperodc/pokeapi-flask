@@ -47,24 +47,50 @@ Incluye autenticacion básica y las siguientes funciones:
 
 Para acceder a los endpoints de la API, se requiere autenticación mediante un token JWT. Para obtener un token, realiza una solicitud POST a la ruta /login con las credenciales:
 
-URL: http://localhost:5000/login
-Método: POST
-Cuerpo (JSON):
+### Obtener un Token JWT
+
+    POST /login
+
+Ejemplo con `curl`:
 ```bash
-    {
-        "username": "admin",
-        "password": "password1"
-    }
- ```
-
-Si las credenciales son correctas, recibirás un token JWT en la respuesta, que debes incluir en las cabeceras de las siguientes solicitudes.
-
-### Ejemplo de solicitud para obtener el token:
-
-```bash
-    curl -X POST "http://localhost:5000/login" -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"password1\"}"
+curl -X POST "http://localhost:5000/login" \
+     -H "Content-Type: application/json" \
+     -d '{"username": "admin", "password": "password1"}'
 ```
-El token debe ser incluido en la cabecera x-access-token para acceder a los siguientes endpoints.
+
+Esto devolverá un token JWT que deberás incluir en las siguientes peticiones.
+
+### Uso del Token JWT
+Agrega el token en los headers de las solicitudes:
+```bash
+curl -X GET "http://localhost:5000/pokemon/pikachu" \
+     -H "x-access-token: <TU_TOKEN_AQUÍ>"
+```
+
+------------------------------------------------------------------------------
+
+## 🐳 Ejecución con Docker
+Puedes ejecutar esta API dentro de un contenedor Docker para facilitar su despliegue.
+
+### Construir la imagen
+```bash
+docker build -t pokeapi-flask .
+```
+
+### Ejecutar el contenedor
+```bash
+docker run -p 5000:5000 pokeapi-flask
+```
+
+### Ver contenedores en ejecución
+```bash
+docker ps
+```
+
+### Detener el contenedor
+```bash
+docker stop <CONTAINER_ID>
+```
 
 ------------------------------------------------------------------------------
 
