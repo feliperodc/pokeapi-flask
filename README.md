@@ -93,7 +93,7 @@ docker stop <CONTAINER_ID>
 
 ## 📡 Uso de la API
 
-#### 🎲 Obtener un Pokemon segun su nombre:
+#### 🎲 Obtener los tipos de un Pokemon segun su nombre:
 
     GET /pokemon/{name}
 
