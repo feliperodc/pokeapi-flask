@@ -45,7 +45,10 @@ Incluye autenticacion básica y las siguientes funciones:
 
 ## 🔑 Autenticacion JWT
 
-Para acceder a los endpoints de la API, se requiere autenticación mediante un token JWT. Para obtener un token, realiza una solicitud POST a la ruta /login con las credenciales:
+Para acceder a los endpoints de la API, se requiere autenticación mediante un token JWT. 
+Este token tiene una expiración de una hora para mayor seguridad.
+
+Para obtener un token, realiza una solicitud POST a la ruta /login con las credenciales:
 
 ### Obtener un Token JWT
 
