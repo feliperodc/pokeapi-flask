@@ -100,9 +100,9 @@ docker stop <CONTAINER_ID>
 
     GET /pokemon/{name}
 
-Ejemplo
+Ejemplo en bash:
 ```bash
-    http://localhost:5000/pokemon/pikachu
+    curl -H "x-access-token: <token>" http://localhost:5000/pokemon/pikachu
 ```
 
 --------------------------------------------------
@@ -111,9 +111,9 @@ Ejemplo
 
     GET /random_pokemon/{type}
 
-Ejemplo:
+Ejemplo en bash:
 ```bash
-    http://localhost:5000/random_pokemon/fire
+    curl -H "x-access-token: <token>" http://localhost:5000/random_pokemon/grass
 ```
 
 --------------------------------------------------
@@ -122,9 +122,9 @@ Ejemplo:
 
     GET /longest_pokemon_name/{type}
 
-Ejemplo:
+Ejemplo en bash:
 ```bash
-    http://localhost:5000/longest_pokemon_name/water
+    curl -H "x-access-token: <token>" http://localhost:5000/longest_pokemon_name/water
 ```
 
 ------------------------------------------------------------------------------
