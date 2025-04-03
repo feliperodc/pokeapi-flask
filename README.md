@@ -13,7 +13,7 @@ Incluye autenticacion básica y las siguientes funciones:
 - pip (administrador de paquetes de Python)  
 - Docker (opcional, si deseas ejecutar el proyecto con contenedores)
 
-## 🚀 Instalación y Ejecución
+## 🚀 Instalación y Ejecución.
 
 1. Clona este repositorio:
    ```bash
@@ -37,13 +37,12 @@ Incluye autenticacion básica y las siguientes funciones:
     ```bash
         python app.py
     ```
+5. Para poder ejecutar la API, se require autenticación (explicada en el punto siguiente)
 
-5. Accede a la API en tu navegador:
-    http://localhost:5000
 
 ------------------------------------------------------------------------------
 
-## 🔑 Autenticacion JWT
+## 🔑 Autenticacion JWT.
 
 Para acceder a los endpoints de la API, se requiere autenticación mediante un token JWT. 
 Este token tiene una expiración de una hora para mayor seguridad.
@@ -69,7 +68,8 @@ curl -X GET "http://localhost:5000/pokemon/pikachu" -H "x-access-token: <TOKEN>"
 
 ------------------------------------------------------------------------------
 
-## 🐳 Ejecución con Docker
+## 🐳 Ejecución con Docker.
+
 Puedes ejecutar esta API dentro de un contenedor Docker para facilitar su despliegue.
 
 ### Construir la imagen
@@ -94,7 +94,7 @@ docker stop <CONTAINER_ID>
 
 ------------------------------------------------------------------------------
 
-## 📡 Uso de la API
+## 📡 Uso de la API.
 
 #### 🎲 Obtener los tipos de un Pokemon segun su nombre:
 
