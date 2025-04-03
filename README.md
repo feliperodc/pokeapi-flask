@@ -2,7 +2,7 @@
 
 Esta es una API en Flask que permite obtener información sobre Pokemon utilizando datos de la [PokeAPI](https://pokeapi.co/).
 
-Incluye autenticacion básica y las siguientes funciones:
+Incluye autenticacion JWT y las siguientes funciones:
 - Consultar tipos de Pokemon.
 - Obtener un Pokemon aleatorio de un tipo especifico.
 - Encontrar el Pokemon con el nombre mas largo de un tipo especifico.
@@ -70,7 +70,7 @@ curl -X GET "http://localhost:5000/pokemon/pikachu" -H "x-access-token: <TOKEN>"
 
 ## 🐳 Ejecución con Docker.
 
-Puedes ejecutar esta API dentro de un contenedor Docker para facilitar su despliegue.
+Se puede ejecutar la API dentro de un contenedor Docker para facilitar su despliegue.
 
 ### Construir la imagen
 ```bash
